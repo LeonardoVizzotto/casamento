@@ -42,11 +42,15 @@
       >
         <div class="section__inner section__inner--hero">
           <div class="hero__logo-wrapper">
-            <!-- Replace with real SVG later -->
             <img
               src="images/hero.svg"
               alt="Event logo"
-              class="hero__logo"
+              class="hero__logo hero__logo--desktop"
+            />
+            <img
+              src="images/hero-mobile.svg"
+              alt="Event logo"
+              class="hero__logo hero__logo--mobile"
             />
           </div>
           <div class="hero__action">
@@ -55,6 +59,7 @@
               class="button button--primary js-confirm-presence"
             >
               confirmar presença
+              <img src="images/button-icon.svg" alt="" class="button__icon" />
             </button>
           </div>
         </div>
@@ -84,27 +89,25 @@
 
             <div class="schedule__items">
               <section class="schedule-item">
-                <!-- Replace with real SVG -->
                 <div class="schedule-item__icon">
                   <img
                     src="images/Coracao.svg"
                     alt="Location icon"
                   />
                 </div>
-                <p class="schedule-item__text">sede campestre da Ajuris </p> <!-- TODO this is bold apply css class -->
-                <p class="schedule-item__text">Av. Heitor Vieira, 1225, Belém Novo, Porto Alegre</p> <!-- TODO this is regular apply css class -->
+                <p class="schedule-item__text schedule-item__text--bold">sede campestre da Ajuris</p>
+                <p class="schedule-item__text schedule-item__text--regular">Av. Heitor Vieira, 1225, Belém Novo, Porto Alegre</p>
               </section>
 
               <section class="schedule-item">
-                <!-- Replace with real SVG -->
                 <div class="schedule-item__icon">
                   <img
                     src="images/Estrela.svg"
                     alt="Date icon"
                   />
                 </div>
-                <p class="schedule-item__text">12.12.26 às 17h</p> <!-- TODO this is bold apply css class -->
-                <p class="schedule-item__text">Seremos pontuais, o ideal é chegar um pouco antes :) </p><!-- TODO this is regular apply css class -->
+                <p class="schedule-item__text schedule-item__text--bold">12.12.26 às 17h</p>
+                <p class="schedule-item__text schedule-item__text--regular">Seremos pontuais, o ideal é chegar um pouco antes :)</p>
               </section>
             </div>
           </div>
@@ -123,7 +126,7 @@
               <h2 id="details-heading" class="section__title sr-only">Details</h2>
             </header>
             <p class="details__lead">
-              a gente vai amar te ter com a gente neste dia :’) estamos convidando as pessoas mais especiais da nossa vida, e poder dividir este momento com vocês é um sonho, etc etc etc.
+              a gente vai amar te ter com a gente neste dia :') estamos convidando as pessoas mais especiais bla bla
             </p>
             <div class="details__action">
               <button
@@ -131,6 +134,7 @@
                 class="button button--primary js-confirm-presence"
               >
                 confirmar presença
+                <img src="images/button-icon.svg" alt="" class="button__icon" />
               </button>
             </div>
           </div>
@@ -159,7 +163,7 @@
 
           <div class="gifts__content">
             <p class="gifts__text">presentes?</p>
-            <p class="gifts__text">Honestamente, o maior presente é compartilhar este momento com vocês. </p>
+            <p class="gifts__text">Honestamente, o <span class="gifts__text--bold">maior presente é compartilhar este momento com vocês.</span></p>
             <p class="gifts__text">Nada é necessário, mas se você fizer muita questão, já que não vamos conseguir levar coisas para Portugal, esta é a nossa chave pix para mimarmos a nossa Babica</p>
             <p class="gifts__text">[chave pix]</p>
 
@@ -180,16 +184,16 @@
     <nav class="site-nav site-nav--bottom" aria-label="Primary (mobile)">
       <ul class="site-nav__list">
         <li class="site-nav__item">
-          <a href="#hero" class="site-nav__link">Home</a>
+          <a href="#hero" class="site-nav__link">início</a>
         </li>
         <li class="site-nav__item">
-          <a href="#schedule" class="site-nav__link">Schedule</a>
+          <a href="#schedule" class="site-nav__link">infos</a>
         </li>
         <li class="site-nav__item">
-          <a href="#details" class="site-nav__link">Details</a>
+          <a href="#details" class="site-nav__link">confirmar</a>
         </li>
         <li class="site-nav__item">
-          <a href="#gifts" class="site-nav__link">Gifts</a>
+          <a href="#gifts" class="site-nav__link">presentes</a>
         </li>
       </ul>
     </nav>

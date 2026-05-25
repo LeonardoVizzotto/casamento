@@ -1,5 +1,0 @@
-const setupModal = () => {
-    
-}
-
-export { setupModal };

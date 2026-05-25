@@ -35,6 +35,7 @@
   --radius-section: 30px; /* general pill radius for sections 2 & 4 */
   --radius-section-top: 30px; /* use for top corners of section 4 only */
   --radius-image: 20px;
+  --radius-pill: 12px;
 
   /* Spacing scale (to be refined with your values) */
   --space-xs: 4px;
@@ -95,6 +96,19 @@
   --nav-item-gap-x: 40px;
   --nav-item-padding-x: 10px;
   --nav-item-padding-y: 8px;
+  --nav-border-radius: 16px;
+  --nav-item-border-radius: 12px;
+
+  /* Mobile nav */
+  --mobile-nav-item-font-size: 14px;
+  --mobile-nav-item-gap: 20px;
+  --mobile-nav-padding: 8px;
+  --mobile-nav-item-padding-x: 6px;
+  --mobile-nav-item-padding-y: 6px;
+  --mobile-nav-border-radius: 16px;
+  --mobile-nav-item-border-radius: 12px;
+  --mobile-schedule-font-size: 16px;
+  --mobile-details-font-size: 30px;
 
   /* Spacing scale */
   --space-xs: 4px;
@@ -114,4 +128,13 @@
 
   /* Section 2 (schedule) */
   --schedule-container-height: 534px; /* image height */
+  --section2-min-width: 720px;
+
+  /* Section 4 (gifts) */
+  --section3-min-width: 700px;
+  --gifts-heading-font-size: 35px;
+  --gifts-heading-font-weight: var(--font-weight-regular);
+  --gifts-body-font-size: var(--font-size-body);
+  --gifts-body-font-weight: var(--font-weight-regular);
+  --gifts-body-bold-font-weight: var(--font-weight-bold);
 }

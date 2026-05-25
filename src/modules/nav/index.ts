@@ -1,5 +1,0 @@
-const setupNavigation = () => {
-
-}
-
-export { setupNavigation };

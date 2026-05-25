@@ -1,4 +1,0 @@
-const setupStickyButton = () => {
-}
-
-export { setupStickyButton };
