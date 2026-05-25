@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>casamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <!-- Desktop top navigation -->
+      <nav class="site-nav site-nav--top" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a href="#hero" class="site-nav__link">início</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#schedule" class="site-nav__link">infos gerais</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#details" class="site-nav__link">confirme sua presença</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#gifts" class="site-nav__link">presentes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section
+        id="hero"
+        class="section section--hero"
+        aria-labelledby="hero-heading"
+      >
+        <div class="section__inner section__inner--hero">
+          <div class="hero__logo-wrapper">
+            <!-- Replace with real SVG later -->
+            <img
+              src="images/hero.svg"
+              alt="Event logo"
+              class="hero__logo"
+            />
+          </div>
+          <div class="hero__action">
+            <button
+              type="button"
+              class="button button--primary js-confirm-presence"
+            >
+              confirmar presença
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHEDULE -->
+      <section
+        id="schedule"
+        class="section section--schedule"
+        aria-labelledby="schedule-heading"
+      >
+        <div class="section__inner section__inner--schedule">
+          <div class="schedule__image-wrapper">
+            <img
+              src="images/abraco.png"
+              alt="Event atmosphere"
+              class="schedule__image"
+            />
+          </div>
+
+          <div class="schedule__content">
+            <header class="section__header">
+              <h2 id="schedule-heading" class="section__title sr-only">
+                Schedule
+              </h2>
+            </header>
+
+            <div class="schedule__items">
+              <section class="schedule-item">
+                <!-- Replace with real SVG -->
+                <div class="schedule-item__icon">
+                  <img
+                    src="images/Coracao.svg"
+                    alt="Location icon"
+                  />
+                </div>
+                <p class="schedule-item__text">sede campestre da Ajuris </p> <!-- TODO this is bold apply css class -->
+                <p class="schedule-item__text">Av. Heitor Vieira, 1225, Belém Novo, Porto Alegre</p> <!-- TODO this is regular apply css class -->
+              </section>
+
+              <section class="schedule-item">
+                <!-- Replace with real SVG -->
+                <div class="schedule-item__icon">
+                  <img
+                    src="images/Estrela.svg"
+                    alt="Date icon"
+                  />
+                </div>
+                <p class="schedule-item__text">12.12.26 às 17h</p> <!-- TODO this is bold apply css class -->
+                <p class="schedule-item__text">Seremos pontuais, o ideal é chegar um pouco antes :) </p><!-- TODO this is regular apply css class -->
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAILS -->
+      <section
+        id="details"
+        class="section section--details"
+        aria-labelledby="details-heading"
+      >
+        <div class="section__inner section__inner--details">
+          <div class="details__text-block">
+            <header class="section__header">
+              <h2 id="details-heading" class="section__title sr-only">Details</h2>
+            </header>
+            <p class="details__lead">
+              a gente vai amar te ter com a gente neste dia :’) estamos convidando as pessoas mais especiais da nossa vida, e poder dividir este momento com vocês é um sonho, etc etc etc.
+            </p>
+            <div class="details__action">
+              <button
+                type="button"
+                class="button button--primary js-confirm-presence"
+              >
+                confirmar presença
+              </button>
+            </div>
+          </div>
+
+          <div class="details__image-wrapper">
+            <!-- Replace with real SVG in desktop; hidden on mobile via CSS -->
+            <img
+              src="images/flower.svg"
+              alt="Decorative illustration"
+              class="details__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- GIFTS -->
+      <section
+        id="gifts"
+        class="section section--gifts"
+        aria-labelledby="gifts-heading"
+      >
+        <div class="section__inner section__inner--gifts">
+          <header class="section__header section__header--centered">
+            <h2 id="gifts-heading" class="section__title sr-only">Gifts</h2>
+          </header>
+
+          <div class="gifts__content">
+            <p class="gifts__text">presentes?</p>
+            <p class="gifts__text">Honestamente, o maior presente é compartilhar este momento com vocês. </p>
+            <p class="gifts__text">Nada é necessário, mas se você fizer muita questão, já que não vamos conseguir levar coisas para Portugal, esta é a nossa chave pix para mimarmos a nossa Babica</p>
+            <p class="gifts__text">[chave pix]</p>
+
+            <div class="gifts__image-wrapper">
+              <!-- Shown only on desktop via CSS -->
+              <img
+                src="images/babica.png"
+                alt="Gift related image"
+                class="gifts__image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mobile bottom navigation -->
+    <nav class="site-nav site-nav--bottom" aria-label="Primary (mobile)">
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a href="#hero" class="site-nav__link">Home</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#schedule" class="site-nav__link">Schedule</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#details" class="site-nav__link">Details</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#gifts" class="site-nav__link">Gifts</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Modal for confirm presence -->
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="confirm-modal-title"
+      hidden
+    >
+      <div class="modal__backdrop"></div>
+      <div class="modal__content">
+        <header class="modal__header">
+          <h2 id="confirm-modal-title" class="modal__title sr-only">
+            confirmar presença
+          </h2>
+          <button
+            type="button"
+            class="modal__close-button js-modal-close"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </header>
+        <div class="modal__body">
+          <p>Here goes some text explaining how to confirm your presence.</p>
+        </div>
+        <footer class="modal__footer">
+          <a
+            href="https://example.com/confirmation"
+            class="button button--primary modal__confirm-link"
+          >
+            Go to confirmation page
+          </a>
+        </footer>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+/* src/styles/tokens.css */
+
+/* 
+  Design tokens: colors, radii, spacing, typography.
+*/
+
+:root {
+  /* Brand / backgrounds */
+  --color-bg-primary: #531e16; /* main background (sections 1 & 3) */
+  --color-bg-secondary: #f6bce6; /* schedule section */
+  --color-bg-tertiary: #f2dfb4; /* gifts section */
+
+  /* Buttons */
+  --color-button-primary-bg: var(--color-bg-secondary);
+  --color-button-primary-text: #000000; /* placeholder until we define contrast */
+
+  /* Navigation */
+  --color-nav-bg-initial: transparent;
+  --color-nav-bg-scrolled: #6c271c;
+  --color-nav-item-text: var(--color-bg-tertiary);
+
+  --color-nav-item-bg-selected: rgba(255, 255, 255, 0.1);
+  --color-nav-item-bg-selected-hover: rgba(255, 255, 255, 0.2);
+  --color-nav-item-bg-unselected: transparent;
+  --color-nav-item-bg-unselected-hover: rgba(255, 255, 255, 0.05);
+
+  /* Text colors per section */
+  /* --color-text-on-primary: #ffffff; there's no text in section 1 */
+  --color-text-section-2: var(--color-bg-primary);
+  --color-text-section-3: var(--color-bg-secondary);
+  --color-text-section-4: var(--color-bg-primary);
+
+  /* Radii */
+  --radius-button: 20px;
+  --radius-section: 30px; /* general pill radius for sections 2 & 4 */
+  --radius-section-top: 30px; /* use for top corners of section 4 only */
+  --radius-image: 20px;
+
+  /* Spacing scale (to be refined with your values) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Typography: base */
+  --font-family-base:
+    "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --font-size-base: 16px;
+  --font-size-hero-heading: 40px; /* section 3 h3 */
+  --font-size-body: 16px;
+  --font-size-nav-item: 16px;
+  --font-size-section2-heading: 20px; /* section 2 h4 */
+  --font-size-section2-span: 20px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.5;
+
+  /* Component-specific type tokens */
+
+  /* Buttons */
+  --button-font-size: 16px;
+  --button-font-weight: var(--font-weight-medium);
+
+  /* Nav items */
+  --nav-item-font-size: var(--font-size-nav-item);
+  --nav-item-font-weight: var(--font-weight-medium);
+
+  /* Section 2 text (schedule) */
+  --schedule-heading-font-size: var(--font-size-section2-heading);
+  --schedule-heading-font-weight: var(--font-weight-bold);
+  --schedule-text-font-size: var(--font-size-section2-span);
+  --schedule-text-font-weight: var(--font-weight-regular);
+
+  /* Section 3 main text (details h3) */
+  --details-main-font-size: var(--font-size-hero-heading);
+  --details-main-font-weight: var(--font-weight-regular);
+
+  /* Layout widths */
+  --page-max-width: 1120px; /* placeholder for overall content max width */
+  --section2-max-width: 960px; /* schedule container max width (placeholder) */
+  --section3-max-width: 1040px; /* details container max width (slightly wider) */
+
+  /* Nav sizing */
+  --nav-height: 64px;
+  --nav-offset-top: 20px;
+  --nav-padding-x: 10px;
+  --nav-padding-y: 12px;
+  --nav-item-gap-x: 40px;
+  --nav-item-padding-x: 10px;
+  --nav-item-padding-y: 8px;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Section vertical padding (for breathing space inside full-height sections) */
+  --section-padding-y: 48px; /* can bump on larger screens later */
+
+  /* Hero-specific spacing */
+  --hero-logo-width: 490px;
+  --hero-logo-height: 251px;
+  --hero-button-offset-top: 74px;
+
+  /* Section 2 (schedule) */
+  --schedule-container-height: 534px; /* image height */
+}

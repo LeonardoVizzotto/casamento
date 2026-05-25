@@ -1,0 +1,5 @@
+const setupNavigation = () => {
+
+}
+
+export { setupNavigation };
