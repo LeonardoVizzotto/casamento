@@ -15,8 +15,6 @@
   --color-button-primary-text: #000000; /* placeholder until we define contrast */
 
   /* Navigation */
-  --color-nav-bg-initial: transparent;
-  --color-nav-bg-scrolled: #6c271c;
   --color-nav-item-text: var(--color-bg-tertiary);
 
   --color-nav-item-bg-selected: rgba(255, 255, 255, 0.1);
@@ -90,13 +88,9 @@
 
   /* Nav sizing */
   --nav-height: 64px;
-  --nav-offset-top: 20px;
-  --nav-padding-x: 10px;
-  --nav-padding-y: 12px;
   --nav-item-gap-x: 40px;
   --nav-item-padding-x: 10px;
   --nav-item-padding-y: 8px;
-  --nav-border-radius: 16px;
   --nav-item-border-radius: 12px;
 
   /* Mobile nav */
@@ -105,26 +99,20 @@
   --mobile-nav-padding: 8px;
   --mobile-nav-item-padding-x: 6px;
   --mobile-nav-item-padding-y: 6px;
-  --mobile-nav-border-radius: 16px;
   --mobile-nav-item-border-radius: 12px;
   --mobile-schedule-font-size: 16px;
   --mobile-details-font-size: 30px;
-
-  /* Spacing scale */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
+  --mobile-hero-bg-width: 319px;
+  --mobile-hero-bg-height: 216px;
 
   /* Section vertical padding (for breathing space inside full-height sections) */
   --section-padding-y: 48px; /* can bump on larger screens later */
 
-  /* Hero-specific spacing */
+  /* Hero sizing */
   --hero-logo-width: 490px;
-  --hero-logo-height: 251px;
-  --hero-button-offset-top: 74px;
+  --hero-logo-offset-top: 180px;
+  --hero-bg-width: 425px;
+  --hero-bg-height: 287.77px;
 
   /* Section 2 (schedule) */
   --schedule-container-height: 534px; /* image height */
