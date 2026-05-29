@@ -77,9 +77,16 @@
   --schedule-text-font-size: var(--font-size-section2-span);
   --schedule-text-font-weight: var(--font-weight-regular);
 
-  /* Section 3 main text (details h3) */
-  --details-main-font-size: var(--font-size-hero-heading);
-  --details-main-font-weight: var(--font-weight-regular);
+  /* Section 3 (details) text */
+  --details-important-font-size: 20px;
+  --details-important-font-weight: var(--font-weight-medium);
+  --details-important-color: var(--color-bg-tertiary);
+  --details-message-font-size: 32px;
+  --details-message-font-weight: var(--font-weight-medium);
+  --details-message-color: var(--color-bg-secondary);
+  --details-info-font-size: 16px;
+  --details-info-font-weight: var(--font-weight-regular);
+  --details-info-color: var(--color-bg-secondary);
 
   /* Layout widths */
   --page-max-width: 1120px; /* placeholder for overall content max width */

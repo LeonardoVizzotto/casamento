@@ -271,6 +271,7 @@ html {
 
 .section--details {
   background-color: var(--color-bg-primary);
+  min-height: auto;
 }
 
 .section__inner--details {
@@ -278,33 +279,37 @@ html {
   align-items: center;
   justify-content: center;
   gap: var(--space-xl);
-  min-width: var(--section3-min-width);
-  max-width: var(--section3-max-width);
 }
 
-.details__text-block {
-  flex: 3;
-}
-
-.details__lead {
-  font-size: var(--details-main-font-size);
-  font-weight: var(--details-main-font-weight);
-  color: var(--color-text-section-3);
-}
-
-.details__action {
-  margin-top: 95px;
-}
-
-.details__image-wrapper {
+.details__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
   flex: 1;
 }
 
-.details__image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius-image);
+.details__important {
+  font-size: var(--details-important-font-size);
+  font-weight: var(--details-important-font-weight);
+  color: var(--details-important-color);
+  margin: 0;
+}
+
+.details__message {
+  font-size: var(--details-message-font-size);
+  font-weight: var(--details-message-font-weight);
+  color: var(--details-message-color);
+  margin: 0;
+}
+
+.details__info {
+  font-size: var(--details-info-font-size);
+  font-weight: var(--details-info-font-weight);
+  color: var(--details-info-color);
+  margin: 0;
+  margin-top: var(--space-md);
 }
 
 /* Section 4 (gifts) */
@@ -451,24 +456,50 @@ html {
     display: none;
   }
 
-  .details__image-wrapper {
-    display: none;
-  }
-
-  .schedule-item__text--bold,
-  .schedule-item__text--regular {
-    font-size: var(--mobile-schedule-font-size);
-  }
-
-  .details__lead {
+  .details__message {
     font-size: var(--mobile-details-font-size);
   }
 
+  .details__important {
+    font-size: var(--mobile-schedule-font-size);
+  }
+
+  .section--details {
+    height: auto;
+  }
+
   .section__inner--details {
+    min-width: 0;
     padding: 40px;
   }
 
-  .details__action {
-    margin-top: 148px;
+  .schedule__content {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .section__inner--schedule {
+    padding-bottom: 0;
+  }
+
+}
+
+@media (min-width: 1151px) {
+  .section--hero,
+  .section--schedule,
+  .section--gifts {
+    min-height: 0;
+    height: 800px;
+  }
+
+  .section__inner--details {
+    min-width: var(--section3-min-width);
+    max-width: var(--section3-max-width);
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
+
+  .details__content {
+    max-width: 392px;
   }
 }
