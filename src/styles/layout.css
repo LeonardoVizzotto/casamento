@@ -498,6 +498,7 @@ canvas {
 
   .section__inner--gifts {
     padding-top: 90px;
+    padding-inline: 0;
   }
 
   .section__inner--schedule {
@@ -746,19 +747,21 @@ canvas {
   }
 
   .gifts__image-wrapper {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
+    max-width: none;
+    /* margin-left: calc(50% - 50vw); */
   }
 
   .gifts__image {
+    display: block;
     width: 100%;
     height: auto;
     border-radius: 0;
   }
 
   .gifts__text {
-    padding-left: var(--space-sm);
-    padding-right: var(--space-sm);
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
   }
 
   .schedule-item__icon {
