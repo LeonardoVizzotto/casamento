@@ -772,18 +772,30 @@ canvas {
 }
 
 
-.site-nav-bottom-cover {
-  display: none;
-}
-
 @media (max-width: 1150px) {
-  .site-nav-bottom-cover {
-    position: fixed;
-    left: 0;
-    right: 0;
+  html.ios-chrome,
+  html.ios-chrome body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  html.ios-chrome body {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html.ios-chrome main {
+    padding-bottom: 0;
+  }
+
+  html.ios-chrome .site-nav--bottom {
+    position: sticky;
     bottom: 0;
-    z-index: 9;
-    background-color: var(--color-bg-primary);
-    pointer-events: none;
+    left: auto;
+    right: auto;
+    width: 100%;
+    min-height: var(--bottom-nav-total);
+    padding: var(--mobile-nav-padding) var(--mobile-nav-padding)
+      calc(var(--mobile-nav-padding) + var(--bottom-safe));
   }
 }

@@ -5,46 +5,26 @@ import { setupNavigation } from "./modules/nav/main";
 function init() {
   setupNavigation();
 
-  const navEl = document.querySelector(".site-nav--bottom") as HTMLElement | null;
-  const coverEl = document.querySelector(".site-nav-bottom-cover") as HTMLElement | null;
+  const ua = window.navigator.userAgent;
+  const isIPhone = /iPhone/i.test(ua);
+  const isChromeIOS = /CriOS/i.test(ua);
+  const isSafariIOS = isIPhone && /Safari/i.test(ua) && !isChromeIOS;
 
-  const isIPhone = /iPhone/i.test(window.navigator.userAgent);
-  const isChromeIOS = /CriOS/i.test(window.navigator.userAgent);
+  if (isIPhone && isChromeIOS) {
+    document.documentElement.classList.add("ios-chrome");
+  }
+
+  const navEl = document.querySelector(".site-nav--bottom") as HTMLElement | null;
 
   function forceSafariLayoutRecalc() {
     if (!navEl) return;
     void navEl.offsetHeight;
   }
 
-  function updateBottomCover() {
-    if (!navEl || !coverEl) return;
-
-    if (!(isIPhone && isChromeIOS)) {
-      coverEl.style.display = "none";
-      coverEl.style.height = "0px";
-      return;
-    }
-
-    const vv = window.visualViewport;
-    const navRect = navEl.getBoundingClientRect();
-    const viewportBottom = vv ? vv.height + vv.offsetTop : window.innerHeight;
-    const gap = Math.max(0, Math.ceil(viewportBottom - navRect.bottom));
-
-    coverEl.style.display = "block";
-    coverEl.style.height = `${gap}px`;
+  if (isSafariIOS) {
+    window.addEventListener("resize", forceSafariLayoutRecalc);
+    window.visualViewport?.addEventListener("resize", forceSafariLayoutRecalc);
   }
-
-  function syncBottomFix() {
-    forceSafariLayoutRecalc();
-    updateBottomCover();
-  }
-
-  syncBottomFix();
-
-  window.addEventListener("resize", syncBottomFix);
-  window.addEventListener("scroll", updateBottomCover, { passive: true });
-  window.visualViewport?.addEventListener("resize", syncBottomFix);
-  window.visualViewport?.addEventListener("scroll", updateBottomCover);
 }
 
 if (document.readyState === "loading") {
