@@ -462,7 +462,7 @@ canvas {
   }
 
   main {
-    padding-bottom: var(--bottom-nav-offset);
+    padding-bottom: var(--bottom-nav-total);
   }
 
   .site-header {
@@ -476,12 +476,13 @@ canvas {
     left: 0;
     right: 0;
     z-index: 10;
-    min-height: var(--nav-height);
+    box-sizing: border-box;
+    min-height: var(--bottom-nav-total);
     background-color: var(--color-bg-primary);
     border-top: 1px solid var(--color-bg-secondary);
     padding: var(--mobile-nav-padding);
     padding-bottom: calc(
-      var(--mobile-nav-padding) + env(safe-area-inset-bottom, 0px)
+      var(--mobile-nav-padding) + var(--bottom-safe)
     );
     justify-content: center;
   }
