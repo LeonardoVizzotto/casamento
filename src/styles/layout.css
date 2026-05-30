@@ -497,7 +497,7 @@ canvas {
   }
 
   .section__inner--gifts {
-    padding-top: 64px;
+    padding-top: 90px;
   }
 
   .section__inner--schedule {
@@ -642,7 +642,7 @@ canvas {
   .details__content {
     min-width: 306px;
     padding: 0;
-    padding-inline: var(--space-md);
+    padding-inline: var(--space-lg);
   }
 
   .details__message {
@@ -756,10 +756,9 @@ canvas {
     border-radius: 0;
   }
 
-  .section__inner--gifts,
-  .section__inner--details {
-    padding-left: 24px;
-    padding-right: 24px;
+  .gifts__text {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
   }
 
   .schedule-item__icon {
