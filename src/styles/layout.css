@@ -305,7 +305,7 @@ canvas {
   gap: var(--space-xl);
   position: relative;
   max-width: 100%;
-  overflow-x: clip;
+  /* overflow-x: clip; */
 }
 
 .details__row {
@@ -570,7 +570,7 @@ canvas {
 
   .details__row {
     position: relative;
-    overflow-x: clip;
+    /* overflow-x: clip; */
     max-width: 100%;
   }
 
@@ -587,6 +587,8 @@ canvas {
   }
 
   .details__row--middle {
+    position: relative;
+    /* overflow-x: clip; */
     gap: 42px;
   }
 
@@ -602,13 +604,21 @@ canvas {
   }
 
   .details__arrow--left {
-    transform: rotate(134deg) scaleX(-1) scaleY(1) scale(1.5);
+    position: absolute;
+    top: 50%;
+    left: -110px;
+    transform: translateY(-50%) rotate(134deg) scaleX(-1) scaleY(1) scale(1.5);
     margin-top: unset;
+    flex: none;
   }
 
   .details__arrow--right {
-    transform: rotate(-55deg) scaleX(-1) scaleY(1) scale(1.55);
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%) rotate(-55deg) scaleX(-1) scaleY(1) scale(1.55);
     margin-top: unset;
+    flex: none;
   }
 
   .details__arrow--bottom-left {
@@ -657,11 +667,12 @@ canvas {
   }
 
   .section--details {
+    overflow-x: clip;
     height: auto;
   }
 
   .section__inner--details {
-    overflow-x: clip;
+    /* overflow-x: clip; */
     padding-inline: 0;
   }
 
