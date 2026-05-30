@@ -95,6 +95,7 @@
 
   /* Nav sizing */
   --nav-height: 64px;
+  --bottom-nav-offset: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px));
   --nav-item-gap-x: 40px;
   --nav-item-padding-x: 10px;
   --nav-item-padding-y: 8px;
