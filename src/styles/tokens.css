@@ -73,7 +73,7 @@
 
   /* Section 2 text (schedule) */
   --schedule-heading-font-size: var(--font-size-section2-heading);
-  --schedule-heading-font-weight: var(--font-weight-bold);
+  --schedule-heading-font-weight: var(--font-weight-medium);
   --schedule-text-font-size: var(--font-size-section2-span);
   --schedule-text-font-weight: var(--font-weight-regular);
 
