@@ -709,3 +709,10 @@ canvas {
     max-width: 392px;
   }
 }
+
+@media (max-width: 830px) {
+  .details__row--middle .details__arrow--left,
+  .details__row--middle .details__arrow--right {
+    display: none;
+  }
+}
