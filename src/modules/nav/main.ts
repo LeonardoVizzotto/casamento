@@ -77,11 +77,22 @@ function setupClickTracking(): void {
   selectors.forEach((selector) => {
     const links = document.querySelectorAll<HTMLAnchorElement>(selector);
     links.forEach((link) => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (event) => {
         const sectionId = link.getAttribute('href')?.replace('#', '');
-        if (sectionId) {
-          forceActiveLink(sectionId);
-        }
+        if (!sectionId) return;
+
+        const target = document.getElementById(sectionId);
+        if (!target) return;
+
+        event.preventDefault();
+        forceActiveLink(sectionId);
+
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+
+        history.replaceState(null, '', `#${sectionId}`);
       });
     });
   });
