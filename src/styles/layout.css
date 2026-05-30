@@ -254,7 +254,7 @@ canvas {
 
 .schedule-item__icon {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-bottom: var(--space-md);
 }
 
@@ -488,6 +488,8 @@ canvas {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    will-change: transform;
   }
 
   .site-nav--bottom .site-nav__list {
