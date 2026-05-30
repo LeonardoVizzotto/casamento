@@ -107,10 +107,10 @@
   --mobile-nav-item-padding-x: 6px;
   --mobile-nav-item-padding-y: 6px;
   --mobile-nav-item-border-radius: 12px;
-  --mobile-schedule-font-size: 16px;
-  --mobile-details-font-size: 30px;
+  --mobile-details-title-font-size: 20px;
+  --mobile-details-font-size: 32px;
   --mobile-hero-bg-width: 319px;
-  --mobile-hero-bg-height: 216px;
+  --mobile-hero-bg-height: 230px;
 
   /* Section vertical padding (for breathing space inside full-height sections) */
   --section-padding-y: 48px; /* can bump on larger screens later */
