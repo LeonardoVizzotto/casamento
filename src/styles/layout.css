@@ -281,6 +281,71 @@ html {
   gap: var(--space-xl);
 }
 
+.details__layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  position: relative;
+}
+
+.details__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.details__arrow {
+  width: 60px;
+  height: auto;
+}
+
+.details__arrow--top-left {
+  transform: rotate(0deg) scaleX(1) scaleY(-1);
+  margin-left: 20px;
+  margin-top: -60px;
+}
+
+.details__arrow--top-right {
+  transform: rotate(0deg) scaleX(-1) scaleY(-1);
+  margin-top: 30px;
+}
+
+.details__arrow--left {
+  transform: rotate(134deg) scaleX(-1) scaleY(1);
+  margin-top: -60px;
+}
+
+.details__arrow--right {
+  transform: rotate(-55deg) scaleX(-1) scaleY(1);
+  margin-top: -30px;
+}
+
+.details__arrow--bottom-left {
+  transform: rotate(2581deg) scaleX(-1) scaleY(1);
+  margin-left: -130px;
+  margin-bottom: 30px;
+}
+
+.details__arrow--bottom-right {
+  transform: rotate(-230deg) scaleX(-1) scaleY(-1) scale(1.3);
+  margin-bottom: -50px;
+}
+
+.details__row--top {
+  gap: 310px;
+}
+
+.details__row--middle {
+  gap: 90px;
+}
+
+.details__row--bottom {
+  gap: 250px;
+}
+
 .details__content {
   display: flex;
   flex-direction: column;
@@ -288,6 +353,7 @@ html {
   justify-content: center;
   gap: 0;
   flex: 1;
+  max-width: 392px;
 }
 
 .details__important {
@@ -403,8 +469,7 @@ html {
     border-radius: var(--mobile-nav-item-border-radius);
   }
 
-  .section__inner--schedule,
-  .section__inner--details {
+  .section__inner--schedule {
     min-width: 0;
   }
 
@@ -464,12 +529,27 @@ html {
     font-size: var(--mobile-schedule-font-size);
   }
 
+  .details__arrow--left {
+    content: url("/images/arrow--secondary.svg");
+  }
+
+  .details__arrow--right {
+    content: url("/images/arrow.svg");
+  }
+
+  .details__arrow--bottom-left {
+    content: url("/images/arrow.svg");
+  }
+
+  .details__arrow--bottom-right {
+    content: url("/images/arrow--secondary.svg");
+  }
+
   .section--details {
     height: auto;
   }
 
   .section__inner--details {
-    min-width: 0;
     padding: 40px;
   }
 
@@ -495,8 +575,8 @@ html {
   .section__inner--details {
     min-width: var(--section3-min-width);
     max-width: var(--section3-max-width);
-    padding-top: 164px;
-    padding-bottom: 164px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .details__content {
