@@ -770,3 +770,20 @@ canvas {
     padding-right: var(--space-lg);
   }
 }
+
+
+.site-nav-bottom-cover {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+  .site-nav-bottom-cover {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: var(--color-bg-primary);
+    pointer-events: none;
+  }
+}
