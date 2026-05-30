@@ -484,6 +484,10 @@ canvas {
       calc(var(--mobile-nav-padding) + var(--bottom-safe));
     background-color: var(--color-bg-primary);
     border-top: 1px solid var(--color-bg-secondary);
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .site-nav--bottom .site-nav__list {
@@ -528,7 +532,7 @@ canvas {
   }
 
   .hero__visual-spacer {
-    height: 138px;
+    height: 70px;
   }
 
   .hero__bg--desktop {
