@@ -3,7 +3,9 @@ const DESKTOP_NAV_LINK_SELECTOR = '.site-nav--top .site-nav__link';
 const MOBILE_NAV_LINK_SELECTOR = '.site-nav--bottom .site-nav__link';
 const ACTIVE_LINK_CLASS = 'site-nav__link--active';
 
-function updateActiveLink(sectionId: string): void {
+let suppressObserver = false;
+
+function setActiveLink(sectionId: string): void {
   const selectors = [DESKTOP_NAV_LINK_SELECTOR, MOBILE_NAV_LINK_SELECTOR];
   selectors.forEach((selector) => {
     const links = document.querySelectorAll<HTMLAnchorElement>(selector);
@@ -49,8 +51,8 @@ function setupActiveTracking(): void {
         }
       }
 
-      if (activeSection) {
-        updateActiveLink(activeSection.id);
+      if (activeSection && !suppressObserver) {
+        setActiveLink(activeSection.id);
       }
     },
     { rootMargin, threshold: thresholds },
@@ -62,6 +64,30 @@ function setupActiveTracking(): void {
   });
 }
 
+function forceActiveLink(sectionId: string): void {
+  suppressObserver = true;
+  setActiveLink(sectionId);
+  setTimeout(() => {
+    suppressObserver = false;
+  }, 1000);
+}
+
+function setupClickTracking(): void {
+  const selectors = [DESKTOP_NAV_LINK_SELECTOR, MOBILE_NAV_LINK_SELECTOR];
+  selectors.forEach((selector) => {
+    const links = document.querySelectorAll<HTMLAnchorElement>(selector);
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        const sectionId = link.getAttribute('href')?.replace('#', '');
+        if (sectionId) {
+          forceActiveLink(sectionId);
+        }
+      });
+    });
+  });
+}
+
 export function setupNavigation(): void {
   setupActiveTracking();
+  setupClickTracking();
 }
