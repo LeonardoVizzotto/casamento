@@ -304,6 +304,8 @@ canvas {
   justify-content: center;
   gap: var(--space-xl);
   position: relative;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .details__row {
@@ -316,6 +318,7 @@ canvas {
 .details__arrow {
   width: 60px;
   height: auto;
+  flex-shrink: 0;
 }
 
 .details__arrow--top-left {
@@ -567,6 +570,8 @@ canvas {
 
   .details__row {
     position: relative;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   .details__row--bottom {
@@ -582,7 +587,7 @@ canvas {
   }
 
   .details__row--middle {
-    gap: 65px;
+    gap: 42px;
   }
 
   .details__arrow--top-left {
@@ -620,6 +625,7 @@ canvas {
   .details__content {
     min-width: 306px;
     padding: 0;
+    padding-inline: var(--space-md);
   }
 
   .details__message {
@@ -655,8 +661,8 @@ canvas {
   }
 
   .section__inner--details {
-    overflow-x: hidden;
-    /* padding: 40px; */
+    overflow-x: clip;
+    padding-inline: 0;
   }
 
   .schedule__content {
