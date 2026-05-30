@@ -9,12 +9,18 @@ function init() {
   const isIPhone = /iPhone/i.test(ua);
   const isChromeIOS = /CriOS/i.test(ua);
   const isSafariIOS = isIPhone && /Safari/i.test(ua) && !isChromeIOS;
+  const braveNavigator = navigator as Navigator & {
+    brave?: { isBrave?: () => Promise<boolean> };
+  };
+  const isBraveIOS = !!braveNavigator.brave;
 
-  if (isIPhone && isChromeIOS) {
+  if (isIPhone && (isChromeIOS || isBraveIOS)) {
     document.documentElement.classList.add("ios-chrome");
   }
 
-  const navEl = document.querySelector(".site-nav--bottom") as HTMLElement | null;
+  const navEl = document.querySelector(
+    ".site-nav--bottom",
+  ) as HTMLElement | null;
 
   function forceSafariLayoutRecalc() {
     if (!navEl) return;
