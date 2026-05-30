@@ -27,23 +27,23 @@ function init() {
 
     const vv = window.visualViewport;
     const navRect = navEl.getBoundingClientRect();
-    const viewportBottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
-    const gap = Math.max(0, viewportBottom - navRect.bottom);
+    const viewportBottom = vv ? vv.height + vv.offsetTop : window.innerHeight;
+    const gap = Math.max(0, Math.ceil(viewportBottom - navRect.bottom));
 
-    coverEl.style.display = gap > 0 ? "block" : "none";
+    coverEl.style.display = "block";
     coverEl.style.height = `${gap}px`;
   }
 
-  function syncBottomNavFixes() {
+  function syncBottomFix() {
     forceSafariLayoutRecalc();
     updateBottomCover();
   }
 
-  syncBottomNavFixes();
+  syncBottomFix();
 
-  window.addEventListener("resize", syncBottomNavFixes);
+  window.addEventListener("resize", syncBottomFix);
   window.addEventListener("scroll", updateBottomCover, { passive: true });
-  window.visualViewport?.addEventListener("resize", syncBottomNavFixes);
+  window.visualViewport?.addEventListener("resize", syncBottomFix);
   window.visualViewport?.addEventListener("scroll", updateBottomCover);
 }
 
