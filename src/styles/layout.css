@@ -4,9 +4,11 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   scroll-padding-top: var(--nav-height);
+  overscroll-behavior-x: none;
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: var(--font-family-base);
@@ -539,10 +541,6 @@ body {
 
   .gifts__image-wrapper {
     display: flex;
-  }
-
-  .section__inner--gifts {
-    align-items: flex-start;
   }
 
   .gifts__content {
