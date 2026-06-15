@@ -401,6 +401,8 @@ canvas {
 
 .pix {
   font-weight: 600 !important;
+  color: inherit; 
+  text-decoration: none; 
 }
 
 /* Section 4 (gifts) */
