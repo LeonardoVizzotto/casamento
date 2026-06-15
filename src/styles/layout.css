@@ -463,6 +463,10 @@ canvas {
     scroll-padding-top: 0;
   }
 
+  .hero__visual {
+    top: -60px;
+  }
+
   main {
     padding-bottom: var(--bottom-nav-total);
   }
@@ -503,7 +507,7 @@ canvas {
   }
 
   .section__inner--gifts {
-    padding-top: 90px;
+    padding-top: 48px;
     padding-inline: 0;
   }
 
@@ -534,7 +538,7 @@ canvas {
   }
 
   .hero__visual-spacer {
-    height: 70px;
+    height: 140px;
   }
 
   .hero__bg--desktop {
