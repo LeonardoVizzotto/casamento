@@ -420,15 +420,32 @@ canvas {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 140px;
+  padding-top: 80px;
+  padding-bottom: 64px;
 }
 
 .gifts__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-xl);
-  max-width: 618px;
+  gap: var(--gifts-block-gap);
+  max-width: 700px;
+}
+
+.gifts__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.gifts__heading {
+  color: var(--color-text-section-4);
+  text-align: center;
+  margin: 0;
+  font-size: var(--gifts-heading-font-size);
+  font-weight: var(--gifts-heading-font-weight);
+  line-height: 1.2;
 }
 
 .gifts__text {
@@ -439,22 +456,30 @@ canvas {
   font-weight: var(--gifts-body-font-weight);
 }
 
-.gifts__text:first-child {
-  font-size: var(--gifts-heading-font-size);
-  font-weight: var(--gifts-heading-font-weight);
-}
-
 .gifts__text--bold {
   font-weight: var(--gifts-body-bold-font-weight);
 }
+
+.gifts__text--narrow {
+  max-width: 660px;
+}
+
+.gifts__block .button {
+  text-decoration: none;
+}
+
 .gifts__image-wrapper {
   display: flex;
   justify-content: center;
 }
 
 .gifts__image {
+  width: var(--gifts-image-width);
   max-width: 100%;
   height: auto;
+  aspect-ratio: 601 / 372;
+  object-fit: cover;
+  object-position: 50% 57%;
   border-radius: var(--radius-image);
 }
 
@@ -584,6 +609,11 @@ canvas {
     align-items: flex-start;
   }
 
+  .gifts__block {
+    align-items: flex-start;
+  }
+
+  .gifts__heading,
   .gifts__text {
     text-align: left;
   }
@@ -716,8 +746,7 @@ canvas {
 
 @media (min-width: 1151px) {
   .section--hero,
-  .section--schedule,
-  .section--gifts {
+  .section--schedule {
     min-height: 0;
     height: 800px;
   }
@@ -775,9 +804,11 @@ canvas {
     border-radius: 0;
   }
 
-  .gifts__text {
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
+  .gifts__heading,
+  .gifts__text,
+  .gifts__block .button {
+    margin-left: var(--space-lg);
+    margin-right: var(--space-lg);
   }
 }
 

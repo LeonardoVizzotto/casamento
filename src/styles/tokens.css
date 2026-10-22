@@ -12,7 +12,7 @@
 
   /* Buttons */
   --color-button-primary-bg: var(--color-bg-secondary);
-  --color-button-primary-text: #000000; /* placeholder until we define contrast */
+  --color-button-primary-text: var(--color-bg-primary);
 
   /* Navigation */
   --color-nav-item-text: var(--color-bg-tertiary);
@@ -130,9 +130,11 @@
 
   /* Section 4 (gifts) */
   --section3-min-width: 700px;
-  --gifts-heading-font-size: 35px;
+  --gifts-heading-font-size: 32px;
   --gifts-heading-font-weight: var(--font-weight-regular);
   --gifts-body-font-size: var(--font-size-body);
   --gifts-body-font-weight: var(--font-weight-regular);
   --gifts-body-bold-font-weight: var(--font-weight-bold);
+  --gifts-block-gap: 56px;
+  --gifts-image-width: 601px;
 }
